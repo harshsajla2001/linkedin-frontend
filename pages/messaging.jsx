@@ -22,7 +22,7 @@ const Messaging = () => {
   const fileInputRef = useRef();
 
   useEffect(() => {
-    socket.current = io('http://localhost:5001');
+    socket.current = io(process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:5001');
     
     if (user) {
       socket.current.emit('join_chat', user._id);
