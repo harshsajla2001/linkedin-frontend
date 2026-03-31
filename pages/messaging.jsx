@@ -292,7 +292,7 @@ const Messaging = () => {
         .sidebar-header h2 { font-size: 16px; }
         .header-actions { display: flex; gap: 8px; }
         .icon-btn { background: transparent; border: none; color: var(--text-secondary); cursor: pointer; padding: 6px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
-        .icon-btn:hover { background: rgba(255,255,255,0.1); color: white; }
+        .icon-btn:hover { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.9); }
         .search-box { display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 0 12px; margin: 12px 16px; border-radius: 4px; border: 1px solid var(--border-light); }
         .search-box input { background: transparent; border: none; color: var(--text-primary); margin-left: 8px; width: 100%; padding: 8px 0; outline: none; }
         

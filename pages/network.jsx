@@ -107,9 +107,8 @@ const Network = () => {
                       <span className="mutual">{conn.connections?.length || 0} connections</span>
                     </div>
                     <button 
-                      className="btn-primary connect-btn" 
+                      className="message-btn" 
                       onClick={() => router.push(`/messaging?userId=${conn._id}`)}
-                      style={{background: 'var(--accent-blue)', color: 'white'}}
                     >
                       <MessageSquare size={16} />
                       <span>Message</span>
@@ -196,8 +195,10 @@ const Network = () => {
         .person-info h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .person-info p { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; height: 34px; }
         .mutual { font-size: 12px; color: var(--text-muted); display: block; margin-top: 4px; }
-        .connect-btn { display: flex; gap: 6px; padding: 6px 16px; width: calc(100% - 32px); margin: 0 16px; justify-content: center; border-radius: 24px; border: 1px solid var(--accent-blue) !important; color: var(--accent-blue) !important; font-weight: 600; transition: all 0.2s; }
-        .connect-btn:hover { background: rgba(10, 102, 194, 0.1) !important; border-width: 2px !important; }
+        .connect-btn { display: flex; gap: 6px; padding: 6px 16px; width: calc(100% - 32px); margin: 0 16px; justify-content: center; border-radius: 24px; border: 1px solid var(--accent-blue); color: var(--accent-blue); font-weight: 600; transition: all 0.2s; background: transparent; }
+        .connect-btn:hover { background: rgba(10, 102, 194, 0.1); border-width: 2px; padding: 5px 15px; }
+        .message-btn { display: flex; gap: 6px; padding: 6px 16px; width: calc(100% - 32px); margin: 0 16px; justify-content: center; border-radius: 24px; border: none; background: var(--accent-blue); color: white; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+        .message-btn:hover { background: #004182; }
         
         @media (max-width: 1100px) {
           .network-container { grid-template-columns: 240px minmax(0, 1fr); }
